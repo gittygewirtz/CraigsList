@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace CraigsList.Models
 {
-    public class IndexViewModel
+    public class NewPostViewModel
     {
-        public List<Post> Posts { get; set; }
-        public bool LoggedIn { get; set; }
-        public int UserId { get; set; }
+        public User User { get; set; }
     }
 }

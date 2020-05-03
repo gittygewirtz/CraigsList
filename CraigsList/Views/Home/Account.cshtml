@@ -1,0 +1,21 @@
+﻿@using CraigsList.Data
+@model List<Post>
+
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        @foreach (Post p in Model)
+        {
+            <div class="well">
+                <h3>@p.Title</h3>
+                <h4>For more info, call: @p.PhoneNumber</h4>
+                <h5>Details:</h5>
+                <p>@p.Text</p>
+                <form method="post" action="/Home/DeletePost">
+                    <input type="hidden" name="id" value="@p.Id" />
+                    <button class="btn btn-danger">Delete</button>
+                </form>
+            </div>
+        }        
+    </div>
+</div>
+

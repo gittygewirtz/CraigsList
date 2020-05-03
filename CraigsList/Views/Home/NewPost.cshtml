@@ -1,0 +1,27 @@
+﻿@model int
+
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        <h2>Create New Post</h2>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6 col-md-offset-3 well">
+        <form method="post" action="/Home/AddNewPost">
+            <div class="row">
+                <input type="hidden" name="userId" value="@Model" />
+                <div class="col-md-6">
+                    <input type="text" placeholder="Title" class="form-control" name="title" />
+                </div>
+                <div class="col-md-6">
+                    <input type="text" placeholder="Phone Number" class="form-control" name="phoneNumber" />
+                </div>
+            </div>
+            <br />
+            <textarea name="text" class="form-control" rows="10" placeholder="What do you have to offer?"></textarea>
+            <button class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</div>
+

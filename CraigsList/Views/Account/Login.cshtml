@@ -1,0 +1,20 @@
+﻿<div class="row" style="margin-top: 20px;">
+
+    <div class="col-md-6 col-md-offset-3 well">
+        @if (ViewBag.Error != null)
+        {
+            <span class="danger">@ViewBag.Error</span>
+        }
+        <br/>
+        <form method="post" action="/Account/Login">
+            <input type="text" class="form-control" name="email" placeholder="Email" />
+            <br />
+            <input type="password" class="form-control" name="password" placeholder="Password" />
+            <br />
+            <button class="btn btn-primary btn-block">Login</button>
+        </form>
+        <br/>
+        <h5>New to CraigsList? Sign up <a href="/Account/SignUp">here</a></h5>
+    </div>    
+</div>
+
